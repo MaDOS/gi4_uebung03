@@ -2,7 +2,13 @@ asm = nasm
 ld = ld
 
 asm_flags = -f elf -F dwarf -g
-ld_flags =
+ld_flags = -lc
+
+a3: a3.o
+	${ld} ${ld_flags} -o a3 a3.o
+
+a3.o: a3.asm
+	${asm} ${asm_flags} a3.asm
 
 a2: a2.o
 	${ld} ${ld_flags} -o a2 a2.o
@@ -23,7 +29,7 @@ hi.o: hi.asm
 	${asm} ${asm_flags} hi.asm
 
 clean:
-	rm hi hi.o a1 a1.o
+	rm -f hi hi.o a1 a1.o a2 a2.o a3 a3.o
 
 beer:
 	echo "Served."
