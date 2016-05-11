@@ -4,6 +4,12 @@ ld = ld
 asm_flags = -f elf -F dwarf -g
 ld_flags =
 
+a2: a2.o
+	${ld} ${ld_flags} -o a2 a2.o
+
+a2.o: a2.asm
+	${asm} ${asm_flags} a2.asm
+
 a1: a1.o
 	${ld} ${ld_flags} -o a1 a1.o
 
