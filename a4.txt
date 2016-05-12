@@ -1,0 +1,2 @@
+Bei Verwendung des Horner Schemas wird die Anzahl der Multiplikationen von 2n-1 auf n reduziert.
+-> Effizienter
