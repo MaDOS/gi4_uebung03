@@ -1,0 +1,1 @@
+Ist N bekannt ist es möglich diese Terme in N Multiplikationen + N Additionen in einer Schleife mit dem Hornerschema zu berechnen.
